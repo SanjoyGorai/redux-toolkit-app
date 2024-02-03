@@ -4,7 +4,7 @@ import { decrement, increment, incrementByAmount } from '../app/redux-toolkit/sl
 
 const Counter = () => {
 
-    const state = useSelector(state => state.counter.value);
+    const state = useSelector(state => state.reducer.counter.value);
     const dispatch = useDispatch();
 
     function handleClick(event) {

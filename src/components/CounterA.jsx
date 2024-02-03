@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement, incrementByAmount } from '../app/redux-toolkit/slices/counterSliceA'
 const CounterA = () => {
 
-    const state = useSelector(state => state.counterA.value);
+    const state = useSelector(state => state.reducer.counterA.value);
     const dispatch = useDispatch();
 
     function handleClick(event) {
