@@ -1,10 +1,9 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment, incrementByAmount } from '../app/redux-toolkit/slices/counterSlice';
+import { increment, decrement, incrementByAmount } from '../app/redux-toolkit/slices/counterSliceA'
+const CounterA = () => {
 
-const Counter = () => {
-
-    const state = useSelector(state => state.counter.value);
+    const state = useSelector(state => state.counterA.value);
     const dispatch = useDispatch();
 
     function handleClick(event) {
@@ -23,9 +22,9 @@ const Counter = () => {
     }
 
     return (
-        <div className='bg-pink-300 p-5 rounded m-5'>
+        <div className='bg-orange-300 p-5 rounded m-5'>
 
-            <h1 className='font-bold text-blue-600'>Counter Component </h1>
+            <h1 className='font-bold text-blue-600'>Counter A Component </h1>
             <h2 className='font-bold text-2xl m-3 p-2'>Value is : {state}</h2>
             <button className='bg-green-600 m-2' id='increment' onClick={handleClick}>Increment</button>
             <button className='bg-red-600 m-2' id='decrement' onClick={handleClick}>Decrement</button>
@@ -34,4 +33,4 @@ const Counter = () => {
     )
 }
 
-export default Counter
+export default CounterA
